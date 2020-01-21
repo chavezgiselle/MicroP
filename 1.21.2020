@@ -1,0 +1,39 @@
+
+#main.cpp
+	
+	DigitalOut myled(LED1);
+	DigitalIn sw(p22);
+
+	
+	int isPressed(void)
+	{
+
+		return sw = 1;
+	}
+	int main() {
+	
+		while(1) {
+
+			if (ispressed()) {
+			wait_ms(25);
+			myled = !myled;
+			while (isPressed()) {} 	//this makes it stuck until the switch is not pressed, not reliable
+			wait_ms(25);
+		}
+
+	}
+
+}
+
+
+#Switch Bounce
+	-It is the glitches before and after the wave form is made. This gets worse as the switches age. The material oxidizes and when you release weird glitching pattern
+	-Data sheet on switch will tell you how long is it expected to have switch bounce
+
+#Time
+
+	-Three versions, default is seconds
+	-To wait milliseconds: wait_ms(25)
+
+
+
